@@ -1,0 +1,13 @@
+body {
+    background-image: url("../plaatjes/victor-mids-witte-bolletjes.gif");
+    background-position: top center;
+}
+
+.victor {
+    width: 60%;
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+

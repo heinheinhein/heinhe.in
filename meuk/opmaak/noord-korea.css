@@ -1,0 +1,11 @@
+body {
+    background-image: url("../plaatjes/noord-korea.gif");
+    background-position: top center;
+}
+
+.filmpje {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}

@@ -1,0 +1,49 @@
+.afbeelding {
+    width: 500px;
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.video {
+    width: 500px;
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.twitterknop {
+    color: white;
+    background-color: #1DA1F2;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.twitterlogo {
+    height: 1em;
+    width: 1em;
+    vertical-align: -2px;
+}
+
+.opdekop {
+    width: 99vw;
+    height: 97vh;
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.youtubeiframe {
+    width: 500px;
+    max-width: 100%;
+    min-width: 300px;
+    height: 281px;
+    border-radius: 5px;
+}

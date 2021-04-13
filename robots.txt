@@ -1,0 +1,8 @@
+# bliep bloep ik ben een robot
+
+User-agent: *
+Allow: /
+Disallow: /php
+
+
+Sitemap: https://heinhe.in/sitemap.xml

@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Comic Mono";
+    src: url("../plaatjes/ComicMono.ttf") format("truetype");
+}
+
+#matrix {
+    z-index: -1;
+    display: block;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+}
+
+.alarmtimer {
+    font-family: "Comic Mono", monospace, monospace;
+    color: red;
+    font-size: 4em;
+    animation: knipper 1s linear infinite;
+}
+
+.countdown {
+    align-content: center;
+    width: fit-content;
+    background: #000000;
+    border: red dashed 2px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-block: 1em;
+}
+
+.alarmtekst {
+    margin-block: 0;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 5px;
+}
+
+@keyframes knipper {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}

@@ -1,11 +1,251 @@
+<!-- kijk in de console -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta content="text/html; meta charset=UTF-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>hein</title>
+
+    <title>hein - index.html</title>
+    <meta content="Victor Mids zegt geen gebruik te maken van acteurs." name="description">
+    <meta content="meuk/plaatjes/favicos/ogimage.png" name="image">
+
+    <meta content="hein - index.html" itemprop="name">
+    <meta content="Victor Mids zegt geen gebruik te maken van acteurs." itemprop="description">
+    <meta content="meuk/plaatjes/favicos/ogimage.png" itemprop="image">
+
+    <meta content="summary" name="twitter:card">
+    <meta content="hein - index.html" name="twitter:title">
+    <meta content="Victor Mids zegt geen gebruik te maken van acteurs." name="twitter:description">
+    <meta content="@heinheinheinhei" name="twitter:site">
+    <meta content="@heinheinheinhei" name="twitter:creator">
+    <meta content="meuk/plaatjes/favicos/ogimage.png" name="twitter:image:src">
+
+    <meta content="hein - index.html" name="og:title">
+    <meta content="Victor Mids zegt geen gebruik te maken van acteurs." name="og:description">
+    <meta content="meuk/plaatjes/favicos/ogimage.png" name="og:image">
+    <meta content="https://heinhe.in/" name="og:url">
+    <meta content="hein" name="og:site_name">
+    <meta content="website" name="og:type">
+
+    <link href="meuk/plaatjes/favicos/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+    <link href="meuk/plaatjes/favicos/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+    <link href="meuk/plaatjes/favicos/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+    <link href="meuk/plaatjes/favicos/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+    <link href="meuk/plaatjes/favicos/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+    <link href="meuk/plaatjes/favicos/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+    <link href="meuk/plaatjes/favicos/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+    <link href="meuk/plaatjes/favicos/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+    <link href="meuk/plaatjes/favicos/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+    <link href="meuk/plaatjes/favicos/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+    <link href="meuk/plaatjes/favicos/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+    <link href="meuk/plaatjes/favicos/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+    <link href="meuk/plaatjes/favicos/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+    <meta content="hein - index.html" name="application-name"/>
+    <meta content="#00FFFF" name="msapplication-TileColor"/>
+    <meta content="meuk/favicos/mstile-144x144.png" name="msapplication-TileImage"/>
+    <meta content="meuk/favicos/mstile-70x70.png" name="msapplication-square70x70logo"/>
+    <meta content="meuk/favicos/mstile-150x150.png" name="msapplication-square150x150logo"/>
+    <meta content="meuk/favicos/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+    <meta content="meuk/favicos/mstile-310x310.png" name="msapplication-square310x310logo"/>
+
+    <link href="meuk/opmaak/index.css" rel="stylesheet">
+    <script src="meuk/scriptjes/index.js" type="text/javascript"></script>
+
+    <script src="meuk/scriptjes/jquery.js" type="text/javascript"></script>
+
+    <link href="meuk/opmaak/default.css" rel="stylesheet">
+    <script src="meuk/scriptjes/default.js"></script>
+    <script>
+        window.onload = function () {
+            init();
+            randomKleur();
+            opdekopChecker();
+            eersteBezoekPopup();
+        };
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MQMWWPZPV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-5MQMWWPZPV', {'anonymize_ip': true});
+    </script>
 </head>
-<body style="background: black">
-<img alt="under construction" src="under_construction_animated.gif">
+<body>
+<div id="loader">
+    <img alt="aan het laden" id="loader-image" src="meuk/plaatjes/loading/index-loading.gif"/>
+</div>
+
+<div id="niet-loader">
+    <script>
+        function eersteBezoekPopup() {
+            if (!localStorage.popupshown) {
+                var kleurtje = Math.floor(Math.random() * 16777215).toString(16);
+                var popupinhoud = document.getElementById("popup-inhoud")
+                popupinhoud.style.backgroundColor = "#" + kleurtje;
+
+                var modal = document.getElementById("popup");
+                var span = document.getElementsByClassName("close")[0];
+
+                modal.style.display = "block";
+
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                localStorage.setItem('popupshown', 'true');
+            }
+        }
+    </script>
+    <div class="popup" id="popup">
+        <div class="popup-inhoud" id="popup-inhoud">
+            <span class="close">&times;</span>
+            <h2 class="popup-titel">
+                hé jij daar
+            </h2>
+            <p class="popup-tekst">
+                <br>
+                ben je hier voor het eerst?<br>
+                laat dan een berichtje achter in
+                <a href="gastenboek.html">
+                    mijn gastenboek
+                </a><br><br>
+                mede mogelijk gemaakt door<br>
+                <a href="http://koekjes.net/gastenboek2/" target="_blank">
+                    <img alt="koekjes.net logo" class="koekjesnet" src="http://koekjes.net/images/gb_logo_new.gif"></a>
+            </p>
+        </div>
+    </div>
+
+    <h1 class="regenboog_tekst">welkom op heinhe.in</h1>
+
+    <h2>volg me op twitter</h2>
+
+    <a class="twitterknop" href="https://twitter.com/intent/follow?screen_name=heinheinheinhei">
+        <img alt="twitter logootje" class="twitterlogo" src="meuk/plaatjes/twitter-logo.png">
+        volg @heinheinheinhei
+    </a>
+
+
+    <h3>
+        inhoud
+    </h3>
+    <div>
+        <button onclick="openTab('victor')">victor</button>
+        <button onclick="openTab('rad')">rad</button>
+        <button onclick="openTab('wifi')">free wifi</button>
+        <button onclick="openTab('waspik')">waspik</button>
+        <button onclick="openTab('soep')">soep</button>
+        <button onclick="openTab('blog')">blog</button>
+        <button onclick="openTab('kipjes')">kipjes</button>
+        <button onclick="openTab('admin')">admin</button>
+    </div>
+    <br>
+
+    <div class="tab" id="victor" style="display:none">
+        <h4>
+            victor mid
+        </h4>
+
+        <a href="victor-mids.html">
+            <img alt="victor mids" class="afbeelding" src="meuk/plaatjes/victor-mids-banner.jpg">
+        </a>
+
+    </div>
+
+    <div class="tab" id="rad" style="display:none">
+        <h4>
+            WHEEL OF PRIZESSS
+        </h4>
+
+        <a href="wheel-of-prices.html">
+            <img alt="een rad met een d geen t" class="afbeelding" src="meuk/plaatjes/rad.png">
+        </a>
+
+    </div>
+
+    <div class="tab" id="wifi" style="display:none">
+        <h4>
+            get free wifi anywhere you go!!1
+        </h4>
+
+        <a href="gratis-wifi.html">
+            <img alt="afbeelding van een vine video" class="afbeelding" src="meuk/plaatjes/wifi.png">
+        </a>
+
+    </div>
+
+    <div class="tab" id="waspik" style="display: none">
+        <h4>
+            waspik
+        </h4>
+        <iframe allowfullscreen=""
+                height="500" loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47057.96461083791!2d4.945945117402651!3d51.69315822037889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c69a7316523577%3A0xa1de1a19348e0f0c!2sWaspik!5e0!3m2!1sen!2snl!4v1617885425366!5m2!1sen!2snl"
+                style="border:0; max-width: 100%; border-radius: 5px" width="500">
+        </iframe>
+    </div>
+
+    <div class="tab" id="soep" style="display:none">
+        <h4>
+            mark rutte zegt soep
+        </h4>
+
+        <video class="video" controls loop preload>
+            <source src="meuk/plaatjes/soep.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <div class="tab" id="blog" style="display:none">
+        <h4>
+            de blog
+        </h4>
+
+        <a href="blog.html">
+            <img alt="blog afbeelding" class="afbeelding" src="meuk/plaatjes/de-blog.png">
+        </a>
+
+    </div>
+
+    <div class="tab" id="kipjes" style="display:none">
+        <h4>
+            kipjes video
+        </h4>
+
+        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="youtubeiframe" frameborder="0"
+                src="https://www.youtube-nocookie.com/embed/JuuYtZlstpw"
+        ></iframe>
+
+    </div>
+
+    <div class="tab" id="admin" style="display:none">
+        <h4>
+            admin paneel VERBODEN VOOR ONBEVOEGDEN
+        </h4>
+
+        <a href="admin.html">
+            <img alt="admin paneel" class="afbeelding" src="meuk/plaatjes/admin.png">
+        </a>
+    </div>
+    <br>
+</div>
+<script>
+    $(window).on('load', function () {
+        showpage();
+    })
+</script>
 </body>
 </html>
