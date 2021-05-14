@@ -37,7 +37,7 @@ function copyright() {
     var footerpspatie1 = document.createTextNode(" | ");
     var footerc = document.createElement('a');
     footerc.text = "privacy";
-    footerc.href = 'privacy.html';
+    footerc.href = '/privacy.html';
     footera.text = "heinhe.in";
     footera.href = "https://heinhe.in/"
     footerp.className = "footerL";
@@ -100,7 +100,7 @@ function insertCS() {
 
         confettic.id = 'confetti';
         var confettis = document.createElement('script');
-        confettis.src = 'meuk/scriptjes/confetti.js';
+        confettis.src = '/meuk/scriptjes/confetti.js';
         document.body.appendChild(confettic);
         document.body.appendChild(confettis);
     }
