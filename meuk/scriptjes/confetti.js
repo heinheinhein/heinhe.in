@@ -1,5 +1,5 @@
 var canvas1, ctx, W, H;
-if (screen.width >= 988) var mp = 75; else mp = 45;
+if (screen.width >= 988) var mp = 85; else mp = 55;
 
 var deactivationTimerHandler, reactivationTimerHandler, animationHandler, particles = [], angle = 0, tiltAngle = 0,
     confettiActive = !0, animationComplete = !0, particleColors = {
